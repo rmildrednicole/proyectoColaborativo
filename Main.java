@@ -1,6 +1,8 @@
-package PrimerTrimestre.Pruebas;
+package PrimerTrimestre.Prueba2;
 
 import java.util.Scanner;
+
+import PrimerTrimestre.Pruebas.alumno;
 
 public class Main {
 
@@ -12,11 +14,8 @@ public class Main {
 		Scanner sn = new Scanner(System.in);
 		
 		
-		System.out.println("Introduzca el nombre del alumno: ");
+		System.out.println("Introduzca el nombre y apellido del alumno: ");
 		String nombre = sc.nextLine();
-		
-		System.out.println("Introduzca el apellido del alumno: ");
-		String apellido = sc.nextLine();
 		
 		System.out.println("Introduzca el Nº de expediente del alumno: ");
 		String n_exp = sc.nextLine();
@@ -30,14 +29,14 @@ public class Main {
 		System.out.println("Introduzca nota del alumno: ");
 		double nota = sn.nextDouble();
 		
-		alumno alumno1 = new alumno(nombre, apellido, n_exp, dni, edad, nota);
+		alumno alumno1 = new alumno(nombre, n_exp, dni, edad, nota);
 		
 		alumno1.mostrarDatos();
 		
 		if (alumno1.aprobado()==true) {
-			System.out.println(alumno1.getNombre()+" "+alumno1.getApellidos()+" esta aprobado");
+			System.out.println(alumno1.getNombre()+" esta aprobado");
 		}else {
-			System.out.println(alumno1.getNombre()+" "+alumno1.getApellidos()+" esta suspenso");
+			System.out.println(alumno1.getNombre()+" esta suspenso");
 		}
 	}
 }
